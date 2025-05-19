@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A</title>
+    <style>
+            div.tooltip {	
+                position: absolute;			
+                text-align: center;			
+                width: 60px;					
+                height: 28px;					
+                padding: 2px;				
+                font: 12px sans-serif;		
+                background: lightsteelblue;	
+                border: 0px;		
+                border-radius: 8px;			
+                pointer-events: none;			
+            }
+
+    p {
+        font-size: 14px;
+        color:#fff;
+        
+    }        
+
+    body{
+        position: relative;
+        background-color: black;
+        
+    }        
+
+    #chart{
+        overflow:visible;
+    }
+
+    .center {
+        position: absolute;
+        top:50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .left {
+        position: absolute;
+        top:50px;
+        left: 0%;
+
+    }
+
+    .left-margin {
+        margin-left: 20px;
+        position: absolute;
+        top:50px;
+        left:100px;
+    }
+
+    .right {
+        position: absolute;
+        top:50px;
+        right: 20%;
+
+    }
+
+    .svg {
+        position: absolute;
+        top:0;
+        left:0;
+    }        
+
+     .buttonGroup {
+        display: flex;
+        justify-content: center;
+        
+
+     }  
+
+     .buttonGroup button{
+        width:180px;
+        height:30px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;   
+        outline: none;     
+        transition: transform .5s;
+     }   
+
+     .buttonGroup button:active{
+         transform: scale(1);
+     }  
+
+     .unselected {
+        background-color: rgb(77, 60, 224);
+
+     }
+
+     .selected{
+        background-color: rgb(12, 189, 50);
+     }
+
+     .buttonGroup button:nth-child(2){
+         margin:0 10px;
+     }
+     .buttonGroup button:nth-child(3){
+        margin-right:10px;
+     }
+
+     .tooltip {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: black;
+         color: #fff;
+         min-width: 120px;
+       
+     }
+
+     html {
+        min-width: 550px;
+        position: relative;
+        }
+
+     <!--
+    .table
+    {
+    position:absolute;
+    bottom:0%;
+    left:40%;
+    border: double 6px #000000;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="buttonGroup">
+        <button class="selected" id="btn8881">All Ages</button>   
+        <button class="unselected" id="btn8882">Age Under 18</button>   
+        <button class="unselected" id="btn8883">Age 18-24</button>   
+        <button class="unselected" id="btn8884">Age 25-34</button>   
+        <button class="unselected" id="btn8885">Age 35-44</button>  
+        <button class="unselected" id="btn8886">Age 44-54</button> 
+        <button class="unselected" id="btn8887">Age 55-64</button> 
+    </div>
+ 
+   <div id="chart0" style="width:1000px;height:800px"></div>
+   <div id="chart1" style="width:300px;height:600px"></div>
+   <div id="chart2" style="width:300px;height:600px;position:absolute;bottom:0px;">
+    <p> <b> Users feadback on wearables impact: </b> </p>
+    <p> Q1. Better Fitness Routine </p>
+    <p> Q2. Motivation to Exercise </p>
+    <p> Q3. Enjoyable Exercise </p>
+    <p> Q4. Connection to Community </p>
+    <p> Q5. Meeting Fitness Goals</p>
+    <p> Q6. Better Overall Health</p>
+    <p> Q7. Improved Sleep Habits</p>
+    <p> Q8. Overall Well-being</p>
+    <p> Q9. Exercise More</p>
+    <p> Q10. Buy Fitness Products</p>
+    <p> Q11. Join Gym Class</p>
+    <p> Q12. Change Diet</p>
+   </div>
+  
+
+
+    <script src="./d3.js"></script>
+    <script src="./d3-selection-multi.js"></script> 
+    <script src="./main.js"></script>
+    
+</body>
+</html>
